@@ -1,20 +1,21 @@
 // Practice: Chicken Monkey
 
-// function chickenMonkey(currentNumber, limit) {
-//   for (; currentNumber <= limit; currentNumber++) {
-//     if (currentNumber % 5 === 0 && currentNumber % 7 === 0) {
-//       console.log("ChickenMonkey");
-//     } else if (currentNumber % 7 === 0) {
-//       console.log("Monkey");
-//     } else if (currentNumber % 5 === 0) {
-//       console.log("Chicken");
-//     } else {
-//       console.log(currentNumber);
-//     }
-//   }
-// }
+function chickenMonkey(currentNumber, limit) {
+  for (; currentNumber <= limit; currentNumber++) {
+    if (currentNumber % 5 === 0 && currentNumber % 7 === 0) {
+      console.log("ChickenMonkey");
+    } else if (currentNumber % 7 === 0) {
+      console.log("Monkey");
+    } else if (currentNumber % 5 === 0) {
+      console.log("Chicken");
+    } else {
+      console.log(currentNumber);
+    }
+  }
+}
 
 // chickenMonkey(5, 42);
+
 
 // Practice: Take a Number - Battle of the Bands
 
@@ -30,6 +31,7 @@
 
 // let under = takeNumber("Underdogs")
 // console.log(under)
+
 
 // Practice: Cookout
 
@@ -170,17 +172,102 @@
 
 // 2
 
-function dog (breed) {
-    if (breed) {
-        return `my favorite dog breed is ${breed}.`;
-    }
-    else {
-        return `I like cats.`
-    }
+// function dog (breed) {
+//     if (breed) {
+//         return `my favorite dog breed is ${breed}.`;
+//     }
+//     else {
+//         return `I like cats.`
+//     }
+// }
+
+// let message = dog("pitbull")
+// console.log(`When it comes to pets,`, message);
+
+// let sad = dog()
+// console.log(`When it comes to pets.`, sad)
+
+
+//BOOK 2 CHAPTER 4 EXERCISES
+
+
+function fizzBuzz (num, lim) {
+	for (; num <= lim; num++) {
+		if (num % 5 === 0 && num % 7 === 0) {
+			console.log("fizzBuzz")
+		}
+		else if (num % 5 === 0) {
+			console.log("fizz")
+		}
+		else if (num % 7 === 0) {
+			console.log("buzz")
+		}
+		else {
+			console.log(num)
+		}
+	}
 }
 
-let message = dog("pitbull")
-console.log(`When it comes to pets,`, message);
+fizzBuzz(1, 100)
 
-let sad = dog()
-console.log(`When it comes to pets.`, sad)
+//_____________________________________________________________________
+
+// let bandNumber = 1
+
+// const scum = takeNumber("Galactic Scum")
+// console.log(scum)  // This should print "1. Galactic Scum" in the console
+
+// const under = takeNumber("Underdogs")
+// console.log(under) 
+
+// const takeNumber = function () {
+
+// }
+
+//_____________________________________________________________________
+
+const hamburger = {
+	name: 'Hamburger',
+	type: 'beef',
+	cooked: false,
+}
+const zucchini = {
+	name: 'Zucchini',
+	type: 'vegetable',
+	cooked: false,
+}
+const chickenBreast = {
+	name: 'Chicken Breast',
+	type: 'chicken',
+	cooked: false,
+}
+const corn = {
+	name: 'Corn',
+	type: 'vegetable',
+	cooked: false,
+}
+const steak = {
+	name: 'Steak',
+	type: 'beef',
+	cooked: false,
+}
+
+// An array that is grouping the objects together.
+const foods = [hamburger, zucchini, chickenBreast, corn, steak];
+
+// An empty array that will store the objects after the `grill()` function cooks the food.
+const cookedFood = [];
+
+function grill (currentObject) {
+    // Modify the food so that it is cooked
+    currentObject.cooked = true;
+
+    // Put the cooked food into the appropriate array
+    cookedFood.push(currentObject);
+};
+
+for ( i = 0; i < foods.length; i++) {
+	grill(foods[i])
+}
+
+console.log(cookedFood)

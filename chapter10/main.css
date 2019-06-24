@@ -1,0 +1,10 @@
+#foodList {
+    display: flex;
+    flex-direction: row;
+}
+
+.fl {
+    border: solid red 2px;
+    padding: 10px;
+    margin: 5px;
+}

@@ -66,7 +66,7 @@
 // Add a method that allows us to add new tools for the painter.
 
 
-// Practice arry loop
+// Practice array loop
 
 // let family = [{
 //     name: "Fred Jones",
@@ -100,5 +100,38 @@
 // })
 
 
-// Practice: Student Components
+// Practice: Represent your pet
 
+// let pet = {
+//     name: "Marley",
+//     species: "Pitbull",
+//     nicknames: ["Boo-Boo Bear", "Buddy"],
+//     age: 9
+// }
+
+
+// Practice: Fast Food Ordering
+
+const restaurant = {
+    name: "Bob's Burgers",
+    orders: [],
+    placeOrder: function (meal) {
+        this.orders.push(meal)
+    },
+}
+
+const chickenComboMeal = {
+    sandwichType: "Grilled Cajun Chicken",
+    fries: true,
+    drinkSize: "Medium"
+}
+
+const burgerMealCombo ={
+    sandwichType: "Hamburger",
+    fries: false,
+    drinkSize: "Large"
+}
+
+// Place an order
+restaurant.placeOrder(burgerMealCombo)
+console.table(restaurant)
